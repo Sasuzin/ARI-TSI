@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+</head>
+
+<body>
+  <video  id="videoCoelho" width="320" height="240">
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  </video>
+  <br><br>
+  <meter id="progress"></meter>
+  <br>
+  <button onclick="play()">Play</button>
+  <button onclick="pause()">Pause</button>
+
+  <script>
+    let videoCoelho = document.getElementById("videoCoelho");
+    let progress = document.getElementById("progress");
+
+    function play() {
+      videoCoelho.play()
+    }
+
+    function pause() {
+      videoCoelho.pause()
+    }
+
+    videoCoelho.ontimeupdate = function () {
+      progress.value = videoCoelho.currentTime;
+    };
+
+    // onloadedmetadata = só é chamado quando os arquivos de metadados é carregado 
+    videoCoelho.onloadedmetadata = function () {
+      progress.max = videoCoelho.duration;
+    }
+  </script>
+</body>
+
+</html>
