@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> 
+
+    <title>Formulario</title>
+
+</head>
+
+<body>
+    <h1>Pesquisa de Satisfação </h1>
+    <p>Está é uma pesquisa de satisfação, preencha corretamente os campos abaixo.</p>
+    <p>Campos com * são ampos obrigatórios</p>
+
+    <form id='form'>
+
+        <div>
+            <label>Nome Completo*</label>
+            <input type="text" id ="nomeCompleto" name="NomeCompleto" required minlength="3" maxlength="80">
+             
+        </div>
+
+        <div>
+            <label>Email</label>
+            <input type="email" name="email" required minlength="4" maxlength="50">
+        </div>
+
+        <div>
+            <label for="tel">Telefone</label>
+            <input type="tel" name="tel" required minlength="9" maxlength="18">
+        </div>
+        <input  type="submit" value="Enviar">
+
+    </form>
+        <script>
+            function validateData(){
+                alert('teste');
+                event.preventDefault;
+
+                let forElement = document.getElementById("form");
+                console.log('formElement',formElement);
+
+                formElement.reportValidity();
+
+                let nameElement = document.getElementById('nomeCompleto').value;
+                console.log('nameElement',nameElement);
+
+                if(nameElement.value.startsWith(" ")){
+                    nameElement.customValidity("Nome não pode começar com espaço");
+                }
+            }
+        </script>
+
+
+
+</body>
+
+</html>

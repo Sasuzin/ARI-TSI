@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio</title>
+</head>
+
+<body>
+  <audio id="audio" controls preload="none">
+    <source src="horse.ogv" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  </audio>
+  <br><br>
+  <img id="player" onclick="play()" src="./poke2.jpg" alt="">
+  <img id="pause" style="display:none" onclick="pause()" src="./poke.jpg" alt="">
+
+
+  <script>
+    let audio = document.getElementById("audio");
+    let image = document.getElementById("player");
+    let playerPause = document.getElementById("pause");
+
+
+    audio.onended = function () {
+      image.src = "poke2.jpg"
+
+    }
+
+    function play() {
+      image.src = "giphy.gif"
+
+
+
+      audio.oncanplay = function () {
+        audio.play();
+        player.style.display = "none";
+        playerPause.style.display = "block";
+        image.src = "poke2.jpg"
+      }
+
+      
+       audio.oncanplay()
+
+    }
+
+    function pause() {
+      audio.pause();
+      player.style.display = "block";
+      playerPause.style.display = "none";
+    }
+  </script>
+</body>
+
+</html>
