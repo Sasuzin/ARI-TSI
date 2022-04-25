@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha</title>
+    <style>
+      #jogo {
+        width: 603px;
+        height: 600px;
+        border: solid 3px;
+      }
+
+      .linha {
+        height: 200px;
+        border-bottom: solid 1px;
+      }
+
+      .casa {
+        width: 200px;
+        height: 100%;
+        border-right: solid 1px;
+        float: left;
+      }
+
+      img {
+        width: 150px;
+        height: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Letter_x.svg/569px-Letter_x.svg.png"
+        alt=""
+        draggable="true"
+        id="x"
+      />
+    
+
+    
+      <img
+        src="https://pngimg.com/uploads/letter_o/letter_o_PNG42.png"
+        alt=""
+        draggable="true"
+        id="o"
+      />
+
+    <div id="jogo">
+      <div class="linha">
+        <div class="casa" id="casa1"></div>
+        <div class="casa" id="casa2"></div>
+        <div class="casa" id="casa3"></div>
+      </div>
+      <div class="linha">
+        <div class="casa" id="casa4"></div>
+        <div class="casa" id="casa5"></div>
+        <div class="casa" id="casa6"></div>
+      </div>
+      <div class="linha">
+        <div class="casa" id="casa7"></div>
+        <div class="casa" id="casa8"></div>
+        <div class="casa" id="casa9"></div>
+      </div>
+    </div>
+
+    <script>
+      var jogo = document.getElementById("jogo");
+      var x = document.getElementById("x");
+      var o = document.getElementById("o");
+
+      x.addEventListener("dragstart", (event) => {
+        event.dataTransfer.setData("Imagem", event.target.id);
+        console.log("X: Começou a arrastar");
+      });
+
+      o.addEventListener("dragstart", (event) => {
+        event.dataTransfer.setData("Imagem", event.target.id);
+        console.log("O: Começou a arrastar");
+      });
+
+      jogo.addEventListener("drop", (event) => {
+        let elementId = event.dataTransfer.getData("Imagem");
+        console.log("Element id" + elementId)
+
+        
+        if(elementId == x.id){
+            let imagemx = x.cloneNode();
+            event.target.appendChild(imagemx);
+        }else{
+            let imagemo = o.cloneNode();
+            event.target.appendChild(imagemo);
+        }
+
+        console.log("Dropou");
+      });
+
+      jogo.addEventListener("dragover", () => {
+        event.preventDefault();
+        console.log("Está sobre o dropzone");
+      });
+
+      jogo.addEventListener("dragleave", () => {
+        dropzone.classList.remove("dropable-over");
+        console.log("Saiu");
+      });
+    </script>
+  </body>
+</html>
