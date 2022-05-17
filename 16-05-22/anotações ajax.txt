@@ -1,0 +1,32 @@
+    O que é AJAX?
+
+É um conjunto de tecnicas utilizadas no cliente para realizar requisições assincronas.
+
+Ajax permite atualizar paginas assincronamente.
+    Realiza troca de dados com o servidor sem recarregar a pagina.
+
+
+Tecnologias
+
+Quais tecnologias o AJAX utiliza?
+
+JS
+XML
+HTML
+OBjeto XmlHttpRequest.
+
+Para criar uma requisição no Ajax, tem que criar um novo XmlHttpRequest.
+
+O XmlHttpRequest tem 3 metodos.
+
+Metodo open() recebe 3 argumentos:
+ O metodo de envio ( GET ou Post.)
+ a URL a ser chamada.
+ Se a chamada é assincrona (true ou false).
+
+O metodo send() recebe um arumento opcional:
+os dados a serem enviados por  POST.
+
+O metodo setRequestHeader() recebe dois parametros:
+O nome do cabeçalho de requisição.
+Valor do cabeçalho.

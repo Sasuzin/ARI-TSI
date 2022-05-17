@@ -1,0 +1,37 @@
+                    LocalStorage.
+
+como funciona?
+R: LocalStorage serve para armazenas dados no navegador.
+
+1-getItem() serve para puxar um valor (recuperar os dados).
+2-Setitem() Para salvar as informações (armazenar os dados).
+3-removeItem() para remover as informações(remover os dados).
+
+
+                    Session Storage.
+
+como funciona? 
+R: Os dados só funcionam enquanto a sessão(navegador) estiver aberta, assim que ele fechar as informações são perdidas.
+
+
+
+
+
+
+
+                    Cache.
+
+
+O que é Cache?
+R: Para colocar uma aplicação offline, é necessario informar quais arquivos deverão ser colocados em cache pelo navegador.
+Basta criar um arquivo de MANIFEST.
+
+Se for colocar comentarios (#), tem que sempre colocar no inicio da linha.
+Util para manter um controle de versões do arquivo.
+
+O arquivo MANIFEST também tpermite ter duas outras seções, como a função de FALLBACK e NETWORK.
+
+
+
+NETWORK pode listar arquivos que nunca deverão ser exibidos.
+FALLBACK serve para conter arquivos alternativos.

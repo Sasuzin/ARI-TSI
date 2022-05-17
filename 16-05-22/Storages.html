@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storages</title>
+</head>
+<body>
+    <ul id="list">
+    </ul>
+
+    <script>
+        let listArray = [];
+
+        if(window.localStorage.getItem("list"));
+         listArray = JSON.parse(window.localStorage.getItem("listar"));
+
+        updateList();
+
+        console.log(listArray);
+
+        function addItem(item) {
+            listArray.push(item);
+            window.localStorage.setItem("list", JSON.stringify(listArray)); // local storage só armazena String. Json faz essa conversão. 
+            updateList();
+        }
+
+        function updateList() {
+            let ulElement = document.getElementById("list");
+
+            let listElements = '';
+
+            listArray.forEach(el =>{
+                listElements += '<li>' + el + '<li>';
+            });
+
+            ulElement.innerHTML = listElements; // inner html ele trás todos os elementos que estão dentro da tag HTML.
+        }
+    </script>
+</body>
+</html>

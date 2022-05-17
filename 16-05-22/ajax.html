@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <script>
+        function sendRequest() {
+            let xmlhtmlRequest = new XMLHttpRequest();
+
+            xmlhtmlRequest.onreadystatechange = () => {
+                console.log(xmlhtmlRequest.readyState);
+                if(xmlhtmlRequest.readyState ==4 &&
+                xmlhtmlRequest.status == 200){
+                    console.log(xmlhtmlRequest.responseText);
+                }
+            }
+
+            xmlhtmlRequest.open("get",arquivo.json,true);
+            xmlhtmlRequest.send();
+
+            xmlhtmlRequest.open("GET","ARI-TSI/16-05-22/Storages.html",true);
+        }
+    </script>
+    
+</body>
+</html>
