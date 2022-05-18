@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #242933;
+    background: #B0E0E6;
     display: flex;
     font-family: Poppins;
     align-items: center;
@@ -18,9 +18,9 @@ body {
 }
 
 .container {
-    background-color: #2F3644;
+    background-color: #E6E6FA;
     border-radius: 5px;
-    border: 2px solid #3E445B;
+    border: 2px solid black;
     width: 450px;
     max-width: 100%;
 }
@@ -31,7 +31,7 @@ body {
 
 .header h2 {
     font-weight: 600;
-    color: #ACBAE1;
+    color: black;
     font-size: 30px;
 }
 
@@ -48,7 +48,7 @@ body {
 .form-control label {
     display: inline-block;
     margin-bottom: 5px;
-    color: #828CAD;
+    color: #1C1C1C;
 }
 
 .form-control input {
