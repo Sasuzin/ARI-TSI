@@ -1,1 +1,2 @@
-Anotações sobre o que ja foi feito será anotado nesse arquivo txt para organização!!!
+1- Todos os campos estão validando, tirando o CPF.
+2- Tirar duvidas sobre como validar o CPF.

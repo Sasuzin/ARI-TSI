@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProjetoAri</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
-        <div class="container">
+    <div class="container">
+        <div class="header">
+            <h2>Cadastro</h2>
+        </div>
+        <form class="form" id="form">
 
-            <div class="header">
-                <h2>Criar Conta</h2>
+            <div class="form-control">
+
+                <label for="username" >Nome</label>
+                <input type="text" id="username">
+                <i class="img-success" ><img src="./Imagens/success-icon.svg" alt=""></i>
+                <i class="img-error" ><img src="Imagens/error-icon.svg" alt=""></i>
+
+                <small>Error Message</small>
+
             </div>
 
-            <form class="form" id="form">
+            <div class="form-control">
 
-                <div class="form-control">
-                    <label for="username">Nome</label>
-                    <input type="text" id="username">
-                    <i class="img-success"><img  src="./Imagens/success-icon.svg" alt=""></i>
-                    <i class="img-error"><img src="Imagens/error-icon.svg" alt=""></i>
+                <label>Email</label>
+                <input type="email" id="email">
+                <i class="img-success" ><img src="Imagens/success-icon.svg" alt=""></i>
+                <i class="img-error" ><img src="Imagens/error-icon.svg" alt=""></i>
 
-                    <small>Error message</small>
-                    </div>
+                <small>Error Message</small>
 
-                    <div class="form-control ">
-                        <label for="email">email</label>
-                        <input type="email" id="email">
-                        <i class="img-success"><img src="./Imagens/success-icon.svg" alt=""></i>
-                        <i class="img-error"><img src="Imagens/error-icon.svg" alt=""></i>
+            </div>
+
+            <div class="form-control">
+
+                <label>Senha</label>
+                <input type="password" id="password">
+                <i class="img-success" ><img src="Imagens/success-icon.svg" alt=""></i>
+                <i class="img-error" ><img src="Imagens/error-icon.svg" alt=""></i>
+
+                <small>Error Message</small>
+
+            </div>
+
+            <div class="form-control">
+
+                <label>Confirme sua senha</label>
+                <input type="password" id="password-two">
+                <i class="img-success" ><img src="Imagens/success-icon.svg" alt=""></i>
+                <i class="img-error" ><img src="Imagens/error-icon.svg" alt=""></i>
+
+                <small>Error Message</small>
+
+            </div>
+
+            <div class="form-control">
+
+                <label>CPF</label>
+                <input type="text" id="CPF">
+                <i class="img-success" ><img src="Imagens/success-icon.svg" alt=""></i>
+                <i class="img-error" ><img src="Imagens/error-icon.svg" alt=""></i>
+
+                <small>Error Message</small>
+
+            </div>
+
+
+            <button type="submit" >ENVIAR</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
     
-                        <small>Error message</small>
-                     </div>
-
-                        <div class="form-control">
-                            <label for="senha">senha</label>
-                            <input type="password" id="senha">
-                            <i class="img-success"><img src="./Imagens/success-icon.svg" alt=""></i>
-                            <i><img class="img-error" src="Imagens/error-icon.svg" alt=""></i>
-        
-                            <small>Error message</small>
-                        </div>
-
-                        <div class="form-control">
-                                <label for="senha2">Confirme sua Senha</label>
-                                <input type="password" id="senha2">
-                                <i class="img-success"><img src="./Imagens/success-icon.svg" alt=""></i>
-                                <i class="img-error"><img src="Imagens/error-icon.svg" alt=""></i>
-            
-                                <small>Error message</small>
-                            </div>
-
-                            <div class="form-control">
-                                <label for="CPF">CPF</label>
-                                <input type="number" id="CPF">
-                                <i class="img-success"><img src="./Imagens/success-icon.svg" alt=""></i>
-                                <i class="img-error"><img src="Imagens/error-icon.svg" alt=""></i>
-            
-                                <small>Error message</small>
-                            </div>
-                            <div class="form-control">
-                                <label for="telefone">Telefone</label>
-                                <input type="tel" id="telefone">
-                                <i class="img-success"><img src="./Imagens/success-icon.svg" alt=""></i>
-                                <i class="img-error"><img src="Imagens/error-icon.svg" alt=""></i>
-            
-                                <small>Error message</small>
-                            </div>
-
-                            <button type="submit">ENVIAR</button>
-            </form>
-        </div>
-
-        <script src="index.js"></script>
-        
 </body>
 </html>
