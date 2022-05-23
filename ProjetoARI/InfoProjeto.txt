@@ -1,2 +1,2 @@
-1- Todos os campos estão validando, tirando o CPF.
-2- Tirar duvidas sobre como validar o CPF.
+1- Tirar duvida sobre como colocar no campo de senha 1 letra maiscula e 1 numero
+2- Como faço pra minhas mascara de cpf só aceitar numeros.
