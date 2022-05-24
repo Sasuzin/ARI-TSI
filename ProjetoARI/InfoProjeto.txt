@@ -1,2 +1,13 @@
 1- Tirar duvida sobre como colocar no campo de senha 1 letra maiscula e 1 numero
 2- Como faço pra minhas mascara de cpf só aceitar numeros.
+
+checar se cada coisa da string tem pelo menos 1 numero.
+
+
+Uma ideia legal que faz sentido, é a pagina de formulario criar a conta após clicar no botão enviar, e salvar no localStorage.
+Assim que clicar no botão enviar ele vai abrir uma nova pagina, que sera a pasta onde o usuario poderá postar suas coisas(rede social). E ter um botão de deslogar, que é simples de fazer:
+Professor falou que tem algo parecido com localStorage remove, então é legal dar uma olhada.
+
+Para deixar apenas numeros do campo é legal dar uma olhada em pattern.
+
+E para deixar só a letra maiuscula ja foi feito!

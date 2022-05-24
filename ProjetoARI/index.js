@@ -52,6 +52,12 @@ function checkInputs() {
         // adicionar a classe de sucesso
         setSuccessFor(password)
     }
+     let isUpperCase = (passwordValue[0] == passwordValue[0].toUpperCase())
+     if(isUpperCase) {
+         setSuccessFor (password)
+     } else {
+         setErrorFor(password,"A primeira letra não é maiuscula")
+     }
 
     if(passwordtwoValue === '') {
         // mostrar erro
@@ -97,6 +103,7 @@ function isEmail(email) {
 
 function mascara_cpf() {
     let cpf = document.getElementById('CPF')
+    cpf.setCustomValidity('dusahdsaudua')
         if(cpf.value.length == 3 || cpf.value.length == 7) {
             cpf.value += "."
         } else if (cpf.value.length == 11) {
