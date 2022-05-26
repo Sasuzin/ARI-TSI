@@ -2,6 +2,9 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
@@ -9,6 +12,35 @@
     <title>Home</title>
 </head>
 <body>
+        <header>
+            <img src="./Imagens/logo.svg" alt="Logo App">
+        </header>
+        
+        <main class="main">
+            <!--Formulario de postagem -->
+            <div class="newPost">
+                <div class="infoUser">
+                    <div class="imgUser"></div>
+                    <strong>Luís Felipe</strong>
+
+                </div>
+                <form action="" class="formPost">
+                    <textarea name="textarea" placeholder="Vamos mudar o mundo?" maxlength="2000"></textarea>
+
+                    <div class="iconsAndButtonm">
+                        <div class="icons">
+                            <button class="btnFileForm"><img src="./Imagens/img.svg" alt="Adicionar uma Imagem"></button>
+                            <button class="btnFileForm"><img src="./Imagens/video.svg" alt="Adicionar uma Imagem"></button>
+                        </div>
+                        <button type="submit" class="btnSubmitForm">Publicar
+
+                        </button>
+                    </div>
+                
+                </form>
+            </div>
+        </main>
+
     <canvas id="tela"></canvas>
     
 </body>
