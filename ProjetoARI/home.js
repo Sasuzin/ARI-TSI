@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     tela.height = 500;
 
     contexto.lineWidth = 7;
-    contexto.strokeStyle = "blue"
+    contexto.strokeStyle = "purple"
+    
 
     const desenharLinha = (linha) => {
 
