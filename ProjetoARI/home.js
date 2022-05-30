@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',()=>{
+/* document.addEventListener('DOMContentLoaded',()=>{
 
     const pincel ={
         ativo: false,
@@ -47,3 +47,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     //desenharLinha({pos:{x: 350,y: 250},posAnterior:{x: 10,y: 10}})
 })
+*/ 
