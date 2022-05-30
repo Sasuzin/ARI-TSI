@@ -12,6 +12,7 @@ form.addEventListener('submit', (e) => {
     checkInputs()
 })
 
+
 function checkInputs() {
 
     const usernameValue = username.value.trim()
@@ -27,10 +28,12 @@ function checkInputs() {
         setErrorFor(username, 'Preencha esse campo')
     } else if((usernameValue.leghth < 3) && (usernameValue.leghth >50)){
         setErrorFor(username, 'O nome deve conter no minimo 3 letras e no maximo 50 letras')
+        
     }
     else {
         // adicionar a classe de sucesso
         setSuccessFor(username)
+        
     }
 
     if(emailValue === '') {
@@ -79,6 +82,18 @@ function checkInputs() {
         setSuccessFor(CPF)
     }
 
+    let users = JSON.parse(localStorage.getItem('Users')) || [];
+    users.push({
+        username: username.value,
+        CPF:    CPF.value,
+        email: email.value,
+        password: password.value
+    });
+
+    localStorage.setItem('Users', JSON.stringify(users));
+    let formRegister = document.getElementsByClassName('form');
+    formRegister[0].style.display = 'none';
+    
 
 }
 
@@ -103,10 +118,15 @@ function isEmail(email) {
 
 function mascara_cpf() {
     let cpf = document.getElementById('CPF')
-    cpf.setCustomValidity('dusahdsaudua')
         if(cpf.value.length == 3 || cpf.value.length == 7) {
             cpf.value += "."
         } else if (cpf.value.length == 11) {
             cpf.value += "-"
         }
 }
+
+
+
+
+
+
