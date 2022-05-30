@@ -85,7 +85,7 @@ function checkInputs() {
     let users = JSON.parse(localStorage.getItem('Users')) || [];
     users.push({
         username: username.value,
-        CPF:    CPF.value,
+        CPF: CPF.value,
         email: email.value,
         password: password.value
     });
